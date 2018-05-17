@@ -16,21 +16,21 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.0.3</version>
+            <version>5.2.0</version>
             <scope>test</scope>
         </dependency>
         <!-- needed to run JUnit 3+4 tests -->
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>4.12.3</version>
+            <version>5.2.0</version>
             <scope>test</scope>
         </dependency>
         <!-- needed for @ParameterizedTest -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.0.3</version>
+            <version>5.2.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -39,8 +39,8 @@
         <plugins>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <!-- 2.20 works, 2.20.1 does not find any junit tests... -->
-                <version>2.19.1</version>
+                <!-- take good care of the version combination surefire<->junit -->
+                <version>2.21.0</version>
                 <configuration>
                     <failIfNoTests>true</failIfNoTests>
                 </configuration>
@@ -48,7 +48,7 @@
                     <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.0.3</version>
+                        <version>1.2.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
